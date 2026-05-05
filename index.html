@@ -3,30 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mr Imposter — Portfolio</title>
+  <meta name="description" content="Mr Imposter — engineering student, tinkerer, builder." />
+  <title>Mr Imposter</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- Three.js for WebGL particles -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <!-- GSAP for animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- three.js for the background particles. Deferred so it doesn't block first paint. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 </head>
 <body>
-
-  <!-- ========== NAVBAR ========== -->
-  <nav id="navbar">
-    <div id="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </div>
-    <div id="logo">MI</div>
-    <div id="nav-menu">
-      <a href="#hero" onclick="toggleMenu()">Home</a>
-      <a href="#about" onclick="toggleMenu()">About</a>
-      <a href="#contact" onclick="toggleMenu()">Contact</a>
-    </div>
-  </nav>
 
   <!-- ========== SCROLL PROGRESS ========== -->
   <div id="scroll-progress-wrap">
@@ -37,66 +20,59 @@
   <div id="chapter-nav">
     <div class="chapter-item active" data-section="hero">
       <svg class="ring" viewBox="0 0 36 36"><circle class="ring-bg" cx="18" cy="18" r="15"/><circle class="ring-fill" cx="18" cy="18" r="15"/></svg>
-      <span>INTRO</span>
+      <span>Intro</span>
     </div>
     <div class="chapter-item" data-section="about">
       <svg class="ring" viewBox="0 0 36 36"><circle class="ring-bg" cx="18" cy="18" r="15"/><circle class="ring-fill" cx="18" cy="18" r="15"/></svg>
-      <span>ABOUT</span>
+      <span>About</span>
     </div>
     <div class="chapter-item" data-section="contact">
       <svg class="ring" viewBox="0 0 36 36"><circle class="ring-bg" cx="18" cy="18" r="15"/><circle class="ring-fill" cx="18" cy="18" r="15"/></svg>
-      <span>CONTACT</span>
+      <span>Contact</span>
     </div>
   </div>
 
-  <!-- ========== HERO SECTION ========== -->
+  <!-- ========== HERO ========== -->
   <section id="hero" class="full-section">
     <canvas id="hero-canvas"></canvas>
     <div class="section-content hero-content">
-      <p class="pre-label">SILICON UNIVERSITY, BHUBANESWAR</p>
+      <p class="pre-label">Portfolio</p>
       <h1 class="scramble-text" data-text="MR. IMPOSTER.">MR. IMPOSTER.</h1>
-      <p class="hero-sub">Engineer. Tinkerer. Builder of things that matter.</p>
-      <a href="#about" class="circle-btn">DISCOVER MORE</a>
+      <p class="hero-sub">Electrical engineering student. I build things — hardware, software, and the messy bits in between.</p>
+      <a href="#about" class="circle-btn">Scroll</a>
     </div>
   </section>
 
-  <!-- ========== ABOUT SECTION ========== -->
+  <!-- ========== ABOUT ========== -->
   <section id="about" class="full-section dark-green">
     <canvas id="about-canvas"></canvas>
     <div class="section-content">
-      <p class="pre-label">THE STORY</p>
-      <h2 class="scramble-text" data-text="FORGED BY FIRE.">FORGED BY FIRE.</h2>
+      <p class="pre-label">About</p>
+      <h2 class="scramble-text" data-text="ABOUT ME.">ABOUT ME.</h2>
       <div class="body-text">
         <p>
-          I am <strong>Mr Imposter</strong> — a B.Tech student in Electrical and Electronics Engineering
-          at Silicon University, Bhubaneswar, driven by an unyielding passion for technology and innovation.
+          I'm a B.Tech student in Electrical and Electronics Engineering at
+          <strong>Silicon University, Bhubaneswar</strong>.
         </p>
         <p>
-          At the intersection of hardware and software, I thrive — tinkering with circuits, writing code,
-          and relentlessly optimizing both until they perform at their absolute best.
-          For me, engineering is not just a discipline; it is a way of thinking.
+          I like figuring out how things work and then making them work better — circuits, code, weekend projects that
+          start small and turn into something I learn a lot from.
         </p>
         <p>
-          My journey has not been without adversity. In 2016, I lost my father to cancer —
-          a defining moment that reshaped my perspective on life. Since then, I have stood beside
-          my mother, aware of the weight she carries, and committed to building a future that
-          eases her burden. Every late night spent studying, every problem solved, every skill
-          acquired — it is all in service of something greater than myself.
-        </p>
-        <p>
-          I do not just learn technology. I use it with purpose.
+          I lost my dad in 2016. Since then, the goal has been simple: get good at this, build a stable life, and take
+          some weight off my mom.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ========== CONTACT SECTION ========== -->
+  <!-- ========== CONTACT ========== -->
   <section id="contact" class="full-section deep-green">
     <canvas id="contact-canvas"></canvas>
     <div class="section-content contact-content">
-      <p class="pre-label">REACH OUT</p>
-      <h2 class="scramble-text" data-text="LET'S CONNECT.">LET'S CONNECT.</h2>
-      <p class="contact-sub">Have an idea, opportunity, or just want to say hello? I'm open to it all.</p>
+      <p class="pre-label">Contact</p>
+      <h2 class="scramble-text" data-text="GET IN TOUCH.">GET IN TOUCH.</h2>
+      <p class="contact-sub">Mail, GitHub, or Telegram — whichever's easiest.</p>
       <div class="contact-icons">
         <a href="mailto:xxxvishalxxx69@gmail.com" class="contact-icon-btn brand-gmail" title="Gmail" aria-label="Email me on Gmail">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -118,6 +94,6 @@
     </div>
   </section>
 
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
