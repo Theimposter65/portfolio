@@ -288,14 +288,35 @@ h1, h2 {
   color: var(--white);
   font-size: 24px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
   background: rgba(255,255,255,0.04);
 }
+.contact-icon-btn svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  transition: transform 0.3s ease;
+}
 .contact-icon-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: rgba(0,255,136,0.08);
   transform: translateY(-4px) scale(1.1);
+}
+.contact-icon-btn:hover svg { transform: scale(1.05); }
+
+/* Brand-specific hover accents */
+.contact-icon-btn.brand-gmail:hover {
+  border-color: #EA4335;
+  background: rgba(234, 67, 53, 0.12);
+  box-shadow: 0 8px 24px rgba(234, 67, 53, 0.25);
+}
+.contact-icon-btn.brand-github:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.18);
+}
+.contact-icon-btn.brand-telegram:hover {
+  border-color: #229ED9;
+  background: rgba(34, 158, 217, 0.14);
+  box-shadow: 0 8px 24px rgba(34, 158, 217, 0.3);
 }
 
 /* ===== SCRAMBLE TEXT ===== */
