@@ -272,39 +272,31 @@ h1, h2 {
   margin-bottom: 56px;
   line-height: 1.7;
 }
-.contact-links {
+.contact-icons {
   display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.contact-link {
-  display: flex;
+  gap: 24px;
   align-items: center;
-  justify-content: space-between;
-  padding: 22px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  text-decoration: none;
+}
+.contact-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.2);
   color: var(--white);
-  transition: all 0.25s;
-  gap: 20px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.04);
 }
-.contact-link:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
-.contact-link:hover { padding-left: 12px; color: var(--accent); }
-.link-label {
-  font-size: 11px;
-  letter-spacing: 0.25em;
-  font-weight: 700;
-  text-transform: uppercase;
+.contact-icon-btn:hover {
+  border-color: var(--accent);
   color: var(--accent);
-  min-width: 100px;
+  background: rgba(0,255,136,0.08);
+  transform: translateY(-4px) scale(1.1);
 }
-.link-value {
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  color: rgba(255,255,255,0.7);
-  transition: color 0.25s;
-}
-.contact-link:hover .link-value { color: var(--accent); }
 
 /* ===== SCRAMBLE TEXT ===== */
 .scramble-text { display: block; min-height: 1em; }
@@ -326,6 +318,5 @@ h1, h2 {
   #chapter-nav { display: none; }
   #scroll-progress-wrap { left: 20px; bottom: 20px; }
   .achievements-grid { grid-template-columns: 1fr; }
-  .contact-link { flex-direction: column; align-items: flex-start; gap: 4px; }
-  h1, h2 { font-size: clamp(36px, 12vw, 64px); }
+h1, h2 { font-size: clamp(36px, 12vw, 64px); }
 }

@@ -92,7 +92,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.scramble-text, .fade-up').forEach(el => observer.observe(el));
 
 // ---- Add fade-up to content blocks ----
-document.querySelectorAll('.pre-label, .hero-sub, .body-text p, .achievement-card, .contact-link, .circle-btn, .contact-sub').forEach(el => {
+document.querySelectorAll('.pre-label, .hero-sub, .body-text p, .contact-icon-btn, .circle-btn, .contact-sub').forEach(el => {
   el.classList.add('fade-up');
   observer.observe(el);
 });
